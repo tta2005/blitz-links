@@ -15,22 +15,19 @@
         .star { position: absolute; background: white; border-radius: 50%; animation: moveStar linear infinite; box-shadow: 0 0 5px #fff; }
         @keyframes moveStar { from { transform: translateY(110vh); } to { transform: translateY(-10vh); } }
 
-        .card-container { position: relative; padding: 3px; border-radius: 40px; background: linear-gradient(0deg, var(--c1), var(--c2)); background-size: 200% 200%; animation: rotateBorder 4s linear infinite; z-index: 1; width:min(92vw,400px); }
+        .card-container { position: relative; padding: 3px; border-radius: 40px; background: linear-gradient(0deg, var(--c1), var(--c2)); background-size: 200% 200%; animation: rotateBorder 4s linear infinite; z-index: 1; width:min(92vw,400px); margin-bottom: 80px; /* Chat Widget အတွက် နေရာချန်ထားခြင်း */ }
         @keyframes rotateBorder { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
 
         .card { background:rgba(10,10,15,0.95); backdrop-filter:blur(30px); border-radius:38px; padding:30px 20px; text-align:center; position: relative; z-index: 2; }
 
-        /* 🏆 Top Fan Box */
         .top-fan { background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.2); border-radius: 15px; padding: 10px; margin-bottom: 15px; font-size: 11px; color: #ffd700; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
-        /* 🥋 Chou Hero Card (BG ပုံပြန်ထည့်ထားတယ်) */
         .hero-card { 
             position: relative; 
             background: rgba(0, 0, 0, 0.6); 
             border: 1.5px solid var(--c1); 
             border-radius: 20px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; overflow: hidden; z-index: 1;
         }
-        /* အောက်ကနေရာမှာ ပုံပြန်ပေါ်အောင် လုပ်ထားတယ် */
         .hero-card::before { 
             content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
             background: url('chou-box-bg.jpg') top center/cover no-repeat; 
