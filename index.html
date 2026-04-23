@@ -115,7 +115,6 @@
         const { data } = await supabaseClient.from('stats').select('*');
         if (data) {
             data.forEach(item => {
-                // ဒီနေရာမှာ 'top_fan' ဆိုတဲ့ id ကို ပြန်ထည့်ထားပါတယ်
                 if (item.name === 'top_fan') document.getElementById('fan-name').innerText = item.value;
                 if (item.name === 'mmr') document.getElementById('mmr-display').innerText = item.value;
                 if (item.name === 'matches') document.getElementById('matches-display').innerText = item.value;
@@ -128,7 +127,6 @@
         }
     }
 
-    // Myanmar Time (GMT+6.5) နဲ့ အလုပ်လုပ်မယ့် Countdown
     function updateCountdown() {
         const txt = document.getElementById('stream-text');
         if (currentLiveStatus === 'closed') {
@@ -185,5 +183,22 @@
         starsBox.appendChild(star);
     }
 </script>
+
+<script>
+  (function(d,t) {
+    var BASE_URL="https://app.chatwoot.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'rveHar8tyZuXoM7LWUW1facg',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
 </body>
 </html>
