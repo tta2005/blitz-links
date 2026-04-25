@@ -15,7 +15,7 @@
         .star { position: absolute; background: white; border-radius: 50%; animation: moveStar linear infinite; box-shadow: 0 0 5px #fff; }
         @keyframes moveStar { from { transform: translateY(110vh); } to { transform: translateY(-10vh); } }
 
-        .card-container { position: relative; padding: 3px; border-radius: 40px; background: linear-gradient(0deg, var(--c1), var(--c2)); background-size: 200% 200%; animation: rotateBorder 4s linear infinite; z-index: 1; width:min(92vw,400px); margin-bottom: 20px; }
+        .card-container { position: relative; padding: 3px; border-radius: 40px; background: linear-gradient(0deg, var(--c1), var(--c2)); background-size: 200% 200%; animation: rotateBorder 4s linear infinite; z-index: 1; width:min(92vw,400px); margin-bottom: 80px; }
         @keyframes rotateBorder { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
 
         .card { background:rgba(10,10,15,0.95); backdrop-filter:blur(30px); border-radius:38px; padding:30px 20px; text-align:center; position: relative; z-index: 2; }
@@ -95,11 +95,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://openfpcdn.io/fingerprintjs/v4"></script>
 
-<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
 <script src="widget.js"></script>
 
 <script>
-    // Supabase Logic ... (သင်ရှိပြီးသားကုဒ်အတိုင်း)
     const SB_URL = "https://zfhumhwmfqdexgzvtrpp.supabase.co"; 
     const SB_KEY = "sb_publishable_7Kxf-6gazHN3n-Wo-NNvHA_LpQ7rCG8"; 
     const supabaseClient = supabase.createClient(SB_URL, SB_KEY);
@@ -179,6 +178,5 @@
         starsBox.appendChild(star);
     }
 </script>
-
 </body>
 </html>
